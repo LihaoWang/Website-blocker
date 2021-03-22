@@ -6,12 +6,27 @@ chrome.storage.local.set({ toggle: false });
 
 chrome.storage.local.onChanged.addListener(update);
 
+function updateFilter() {
+  chrome.storage.local.get(["filter"], function (result) {
+    defaultFilters = result.filter;
+    chrome.extension.getBackgroundPage().console.log(defaultFilters);
+  });
+}
+function textSoap(input) {
+  input.forEach((item, index) => {
+    input[index] = "*://" + item + "/*";
+  });
+  chrome.extension.getBackgroundPage().console.log("done");
+}
+
 function update() {
   chrome.storage.local.get(["toggle"], function (result) {
     if (!result.toggle) {
+      updateFilter();
       chrome.webRequest.onBeforeRequest.removeListener(blockRequest);
       chrome.extension.getBackgroundPage().console.log("false");
     } else {
+      updateFilter();
       chrome.webRequest.onBeforeRequest.addListener(
         blockRequest,
         { urls: defaultFilters },
