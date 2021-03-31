@@ -4,9 +4,9 @@ const filterList = document.getElementById("filterList");
 const updateText = () => {
   chrome.storage.local.get(["toggle"], function (result) {
     if (result.toggle) {
-      toggle.innerText = "ON";
+      toggle.innerText = "Stop Focus";
     } else {
-      toggle.innerText = "OFF";
+      toggle.innerText = "Start Focus";
     }
   });
 };
@@ -28,8 +28,12 @@ chrome.storage.local.onChanged.addListener(updateText);
 chrome.storage.local.onChanged.addListener(updateList);
 
 toggle.onclick = () => {
-  chrome.storage.local.get(["toggle"], function (result) {
-    chrome.storage.local.set({ toggle: !result.toggle });
+  chrome.storage.local.get(["filter"], function (r) {
+    if (r.filter.length != 0) {
+      chrome.storage.local.get(["toggle"], function (result) {
+        chrome.storage.local.set({ toggle: !result.toggle });
+      });
+    }
   });
 
   chrome.extension.getBackgroundPage().console.log("clicked");
@@ -53,8 +57,6 @@ const makearr = (input) => {
   let trim = result.map((str) => str.trim());
   return trim.map((item) => `*://*.${item}/*`);
 };
-
-const showFilter = (item) => item + "123";
 
 function documentEvents() {
   document.getElementById("ok_btn").addEventListener("click", function () {
