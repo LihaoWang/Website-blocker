@@ -1,12 +1,15 @@
 const toggle = document.getElementById("toggle");
 const ok = document.getElementById("ok_btn");
 const filterList = document.getElementById("filterList");
+const reset = document.getElementById("reset_btn");
+document.addEventListener("DOMContentLoaded", documentEvents, false);
 const updateText = () => {
   chrome.storage.local.get(["toggle"], function (result) {
     if (result.toggle) {
       toggle.innerText = "Stop Focus";
     } else {
-      toggle.innerText = "Start Focus";
+      // toggle.innerText = "Start Focus";
+      toggle.innerHTML = `<i class="far fa-clock"></i>Start Focus`;
     }
   });
 };
@@ -27,18 +30,17 @@ updateText();
 chrome.storage.local.onChanged.addListener(updateText);
 chrome.storage.local.onChanged.addListener(updateList);
 
-toggle.onclick = () => {
-  chrome.storage.local.get(["filter"], function (r) {
-    if (r.filter.length != 0) {
-      chrome.storage.local.get(["toggle"], function (result) {
-        chrome.storage.local.set({ toggle: !result.toggle });
-      });
-    }
-  });
+// toggle.onclick = () => {
+//   chrome.storage.local.get(["filter"], function (r) {
+//     if (r.filter.length != 0) {
+//       chrome.storage.local.get(["toggle"], function (result) {
+//         chrome.storage.local.set({ toggle: !result.toggle });
+//       });
+//     }
+//   });
 
-  chrome.extension.getBackgroundPage().console.log("clicked");
-};
-document.addEventListener("DOMContentLoaded", documentEvents, false);
+//   chrome.extension.getBackgroundPage().console.log("clicked");
+// };
 
 function myAction(input) {
   chrome.extension.getBackgroundPage().console.log(input.value);
@@ -46,7 +48,10 @@ function myAction(input) {
     chrome.storage.local.set({ filter: [] });
   } else {
     const arr = makearr(input.value);
-    chrome.storage.local.set({ filter: arr });
+    chrome.storage.local.get(["filter"], function (result) {
+      chrome.storage.local.set({ filter: result.filter.concat(arr) });
+    });
+    // chrome.storage.local.set({ filter: arr });
     chrome.storage.local.set({ toggle: false });
     filterList.innerHTML = arr.map((item) => `${item}<br/>`).join("");
   }
@@ -59,7 +64,20 @@ const makearr = (input) => {
 };
 
 function documentEvents() {
-  document.getElementById("ok_btn").addEventListener("click", function () {
+  ok.addEventListener("click", function () {
     myAction(document.getElementById("textbox"));
+  });
+  toggle.addEventListener("click", function () {
+    chrome.storage.local.get(["filter"], function (r) {
+      if (r.filter.length != 0) {
+        chrome.storage.local.get(["toggle"], function (result) {
+          chrome.storage.local.set({ toggle: !result.toggle });
+        });
+      }
+    });
+    chrome.extension.getBackgroundPage().console.log("clicked");
+  });
+  reset.addEventListener("click", function () {
+    chrome.storage.local.set({ filter: [] });
   });
 }
