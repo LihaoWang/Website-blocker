@@ -2,6 +2,7 @@ const toggle = document.getElementById("toggle");
 const ok = document.getElementById("ok_btn");
 const filterList = document.getElementById("filterList");
 const reset = document.getElementById("reset_btn");
+const alert = document.getElementById("alert");
 document.addEventListener("DOMContentLoaded", documentEvents, false);
 const updateText = () => {
   chrome.storage.local.get(["toggle"], function (result) {
@@ -73,6 +74,11 @@ function documentEvents() {
         chrome.storage.local.get(["toggle"], function (result) {
           chrome.storage.local.set({ toggle: !result.toggle });
         });
+      } else {
+        alert.innerHTML = `<i class="fas fa-info-circle"></i>Please add at least one website`;
+        setTimeout(() => {
+          alert.innerHTML = null;
+        }, 5000);
       }
     });
     chrome.extension.getBackgroundPage().console.log("clicked");
