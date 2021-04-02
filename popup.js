@@ -31,19 +31,7 @@ updateText();
 chrome.storage.local.onChanged.addListener(updateText);
 chrome.storage.local.onChanged.addListener(updateList);
 
-// toggle.onclick = () => {
-//   chrome.storage.local.get(["filter"], function (r) {
-//     if (r.filter.length != 0) {
-//       chrome.storage.local.get(["toggle"], function (result) {
-//         chrome.storage.local.set({ toggle: !result.toggle });
-//       });
-//     }
-//   });
-
-//   chrome.extension.getBackgroundPage().console.log("clicked");
-// };
-
-function myAction(input) {
+const myAction = (input) => {
   chrome.extension.getBackgroundPage().console.log(input.value);
   if (input.value.length == 0) {
     chrome.storage.local.set({ filter: [] });
@@ -56,12 +44,28 @@ function myAction(input) {
     chrome.storage.local.set({ toggle: false });
     filterList.innerHTML = arr.map((item) => `${item}<br/>`).join("");
   }
-}
+};
 
 const makearr = (input) => {
   const result = input.split(",");
   let trim = result.map((str) => str.trim());
-  return trim.map((item) => `*://*.${item}/*`);
+  return trim.map((item) => {
+    if (item.includes("https://")) {
+      item = item.replace("https://", "");
+    }
+    if (item.includes("http://")) {
+      item = item.replace("http://", "");
+    }
+    if (item.includes("www.")) {
+      item = item.replace("www.", "");
+    }
+    // return `*://*.${item}/*`;
+    const last = item.charAt(item.length - 1);
+    if (last == "/") {
+      return `*://*.${item}*`;
+    }
+    return `*://*.${item}/*`;
+  });
 };
 
 function documentEvents() {
@@ -85,5 +89,6 @@ function documentEvents() {
   });
   reset.addEventListener("click", function () {
     chrome.storage.local.set({ filter: [] });
+    chrome.storage.local.set({ toggle: false });
   });
 }
