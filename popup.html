@@ -80,6 +80,10 @@
         background-color: #f9f9f9;
         font-family: "Roboto Condensed", sans-serif;
       }
+      .instruction {
+        text-align: center;
+        font-size: 13px;
+      }
       .filterText {
         text-align: center;
       }
@@ -90,15 +94,20 @@
       .fas {
         margin-right: 5px;
       }
+      #alert {
+        text-align: center;
+      }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <!-- <img src="icons/logo_128.png" width="20px" /> -->
       <button class="btn st-btn" id="toggle" class="btn btn-secondary">
         Hello Extensions
       </button>
       <p id="alert"></p>
+      <p class="instruction">
+        Enter websites you'd like to block. Seperate by comma.
+      </p>
       <textarea id="textbox"></textarea>
       <button class="btn submit-btn" id="ok_btn" type="button">
         <i class="fas fa-plus"></i>Add to filter
@@ -106,11 +115,6 @@
       <button class="btn submit-btn" id="reset_btn" type="button">
         <i class="fas fa-archive"></i>Reset
       </button>
-
-      <!-- <form>
-      <textarea>123</textarea>
-      <input type="submit" />
-    </form> -->
       <h3>Filter List</h3>
       <p class="filterText" id="filterList"></p>
     </div>

@@ -1,7 +1,7 @@
 {
   "name": "Freedom Website Blocker",
   "version": "1.0",
-  "description": "A simple extension that blocks distracting website. So you can focus on what's important",
+  "description": "A simple website blocker.",
   "permissions": ["webRequest", "webRequestBlocking", "storage", "<all_urls>"],
   "background": {
     "scripts": ["background.js"]

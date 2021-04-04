@@ -7,9 +7,8 @@ document.addEventListener("DOMContentLoaded", documentEvents, false);
 const updateText = () => {
   chrome.storage.local.get(["toggle"], function (result) {
     if (result.toggle) {
-      toggle.innerText = "Stop Focus";
+      toggle.innerHTML = `<i class="far fa-stop-circle"></i>Stop Focus`;
     } else {
-      // toggle.innerText = "Start Focus";
       toggle.innerHTML = `<i class="far fa-clock"></i>Start Focus`;
     }
   });
@@ -32,7 +31,7 @@ chrome.storage.local.onChanged.addListener(updateText);
 chrome.storage.local.onChanged.addListener(updateList);
 
 const myAction = (input) => {
-  chrome.extension.getBackgroundPage().console.log(input.value);
+  // chrome.extension.getBackgroundPage().console.log(input.value);
   if (input.value.length == 0) {
     chrome.storage.local.set({ filter: [] });
   } else {
@@ -59,7 +58,6 @@ const makearr = (input) => {
     if (item.includes("www.")) {
       item = item.replace("www.", "");
     }
-    // return `*://*.${item}/*`;
     const last = item.charAt(item.length - 1);
     if (last == "/") {
       return `*://*.${item}*`;
@@ -71,6 +69,7 @@ const makearr = (input) => {
 function documentEvents() {
   ok.addEventListener("click", function () {
     myAction(document.getElementById("textbox"));
+    document.getElementById("textbox").value = "";
   });
   toggle.addEventListener("click", function () {
     chrome.storage.local.get(["filter"], function (r) {
@@ -85,7 +84,6 @@ function documentEvents() {
         }, 5000);
       }
     });
-    chrome.extension.getBackgroundPage().console.log("clicked");
   });
   reset.addEventListener("click", function () {
     chrome.storage.local.set({ filter: [] });

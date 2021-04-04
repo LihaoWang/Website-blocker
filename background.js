@@ -9,14 +9,8 @@ chrome.storage.local.onChanged.addListener(update);
 function updateFilter() {
   chrome.storage.local.get(["filter"], function (result) {
     defaultFilters = result.filter;
-    chrome.extension.getBackgroundPage().console.log(defaultFilters);
+    // chrome.extension.getBackgroundPage().console.log(defaultFilters);
   });
-}
-function textSoap(input) {
-  input.forEach((item, index) => {
-    input[index] = "*://" + item + "/*";
-  });
-  chrome.extension.getBackgroundPage().console.log("done");
 }
 
 function update() {
@@ -24,7 +18,7 @@ function update() {
     if (!result.toggle) {
       updateFilter();
       chrome.webRequest.onBeforeRequest.removeListener(blockRequest);
-      chrome.extension.getBackgroundPage().console.log("false");
+      // chrome.extension.getBackgroundPage().console.log("false");
     } else {
       updateFilter();
       chrome.webRequest.onBeforeRequest.addListener(
@@ -32,7 +26,7 @@ function update() {
         { urls: defaultFilters },
         ["blocking"]
       );
-      chrome.extension.getBackgroundPage().console.log("true");
+      // chrome.extension.getBackgroundPage().console.log("true");
     }
   });
 }
