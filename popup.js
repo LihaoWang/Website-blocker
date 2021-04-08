@@ -3,6 +3,7 @@ const ok = document.getElementById("ok_btn");
 const filterList = document.getElementById("filterList");
 const reset = document.getElementById("reset_btn");
 const alert = document.getElementById("alert");
+
 document.addEventListener("DOMContentLoaded", documentEvents, false);
 const updateText = () => {
   chrome.storage.local.get(["toggle"], function (result) {

@@ -4,6 +4,7 @@ function blockRequest(details) {
 }
 
 chrome.storage.local.set({ toggle: false });
+chrome.storage.local.set({ filter: [] });
 chrome.storage.local.onChanged.addListener(update);
 
 function updateFilter() {
