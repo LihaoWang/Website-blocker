@@ -1,6 +1,6 @@
 {
   "name": "Freedom Website Blocker",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "A simple website blocker.",
   "permissions": ["webRequest", "webRequestBlocking", "storage", "<all_urls>"],
   "background": {
