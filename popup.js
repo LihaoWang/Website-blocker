@@ -9,8 +9,10 @@ const updateText = () => {
   chrome.storage.local.get(["toggle"], function (result) {
     if (result.toggle) {
       toggle.innerHTML = `<i class="far fa-stop-circle"></i>Stop Focus`;
+      toggle.classList.add("st-btn-focus");
     } else {
       toggle.innerHTML = `<i class="far fa-clock"></i>Start Focus`;
+      toggle.classList.remove("st-btn-focus");
     }
   });
 };
@@ -34,7 +36,8 @@ chrome.storage.local.onChanged.addListener(updateList);
 const myAction = (input) => {
   // chrome.extension.getBackgroundPage().console.log(input.value);
   if (input.value.length == 0) {
-    chrome.storage.local.set({ filter: [] });
+    // chrome.storage.local.set({ filter: [] });
+    showAlert();
   } else {
     const arr = makearr(input.value);
     chrome.storage.local.get(["filter"], function (result) {
@@ -67,6 +70,13 @@ const makearr = (input) => {
   });
 };
 
+const showAlert = () => {
+  alert.innerHTML = `<i class="fas fa-info-circle"></i>Please add at least one website`;
+  setTimeout(() => {
+    alert.innerHTML = null;
+  }, 5000);
+};
+
 function documentEvents() {
   ok.addEventListener("click", function () {
     myAction(document.getElementById("textbox"));
@@ -79,10 +89,7 @@ function documentEvents() {
           chrome.storage.local.set({ toggle: !result.toggle });
         });
       } else {
-        alert.innerHTML = `<i class="fas fa-info-circle"></i>Please add at least one website`;
-        setTimeout(() => {
-          alert.innerHTML = null;
-        }, 5000);
+        showAlert();
       }
     });
   });
