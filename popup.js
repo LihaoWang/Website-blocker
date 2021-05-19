@@ -35,6 +35,7 @@ chrome.storage.local.onChanged.addListener(updateList);
 
 const myAction = (input) => {
   // chrome.extension.getBackgroundPage().console.log(input.value);
+
   if (input.value.length == 0) {
     // chrome.storage.local.set({ filter: [] });
     showAlert();
@@ -51,8 +52,17 @@ const myAction = (input) => {
 
 const makearr = (input) => {
   const result = input.split(",");
-  let trim = result.map((str) => str.trim());
+  // let trim = result.map((str) => str.trim());
+  let trim = [];
+  for (item of result) {
+    if (item.trim().length != 0) {
+      trim.push(item.trim());
+    }
+  }
   return trim.map((item) => {
+    if (item.length == 0) {
+      return;
+    }
     if (item.includes("https://")) {
       item = item.replace("https://", "");
     }
