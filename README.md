@@ -2,21 +2,19 @@
 
 Freedom 是一款 Chrome 浏览器插件，它只有一个功能：屏蔽任何不必要的网站，从而让你能专注在更重要的事上。
 
-## 安装
-**方式 1 （推荐）**
-
 [从谷歌 Web 商店安装](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
 
-**方式 2**
-
+## 手动安装
 1. 下载[最新 Release](https://github.com/LihaoWang/Website-blocker/releases/tag/1.0.1)
-2. 点击 Chrome 浏览器右上角菜单栏，从“更多工具”中打开“扩展程序”，或在网址列输入：chrome://extensions/
-3. 在右上角打开“开发者模式”
-4. 加载已解压的扩展程序
-5. 点击弹出窗口的“添加扩展程序”
+![chrome-screenshot-3.jpg](https://files.xiami.com/cpp/07d8ec1a38a5462c3afbfac41413b8af/chrome-screenshot-3.jpg)
+3. 点击 Chrome 浏览器右上角菜单栏，从「更多工具」中打开「扩展程序」，或在网址栏输入：chrome://extensions/
+![chrome-screenshot-4.jpg](https://files.xiami.com/cpp/07d8ec1a38a5462c3afbfac41413b8af/chrome-screenshot-4.jpg)
+5. 在右上角打开「开发者模式」
+![chrome-screenshot-5.jpg](https://files.xiami.com/cpp/07d8ec1a38a5462c3afbfac41413b8af/chrome-screenshot-5.jpg)
+7. 选择「加载已解压的扩展程序」
+8. 安装完成，可以看到 Freedom 出现在扩展程序列表中
 
 ## 使用
-
 1. 在插件栏中点开 Freedom 插件。在输入框中输入想要屏蔽的网址，多个网址之间用「逗号」隔开（注意使用英文逗号）。
 2. 网址输入完毕后，点击「Add to filter」即可将以上网站加入屏蔽列表
 3. 点击「Start Focus」，开启屏蔽模式
