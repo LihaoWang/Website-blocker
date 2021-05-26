@@ -12,8 +12,8 @@ Freedom is a simple Chrome extension that blocks any (distracting) website. So y
 
 ## Install Manually
 
-1. Download[the latest release](https://github.com/LihaoWang/Website-blocker/releases/tag/1.0.1)
-2. In Chrome menu, select **More tools - Extensions** ，or type in address bar：chrome://extensions/
+1. Download [the latest release](https://github.com/LihaoWang/Website-blocker/releases/tag/1.0.1), then unzip
+2. In Chrome menu, select **More tools - Extensions**, or type in address bar: chrome://extensions/
 
 ![chrome-screenshot - 3.jpg](https://i.loli.net/2021/05/26/XkrWzgGxcs62Y9D.jpg)
 
@@ -21,17 +21,11 @@ Freedom is a simple Chrome extension that blocks any (distracting) website. So y
 
 ![chrome-screenshot - 4.jpg](https://i.loli.net/2021/05/26/cMplsLd8x3qSPCV.jpg)
 
-4. Click **load unpacked**, select the folder you just downloaded
+4. Click **load unpacked**, select the folder downloaded
 
 ![chrome-screenshot - 5.jpg](https://i.loli.net/2021/05/26/mMknT4AdxvLXlS6.jpg)
 
 5. If installed successfully, you will see Freedom in your extension list
-
-## 使用
-
-1. 在插件栏中点开 Freedom 插件。在输入框中输入想要屏蔽的网址，多个网址之间用「逗号」隔开（注意使用英文逗号）。
-2. 网址输入完毕后，点击「Add to filter」即可将以上网站加入屏蔽列表
-3. 点击「Start Focus」，开启屏蔽模式
 
 ## FAQ
 
