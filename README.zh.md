@@ -21,7 +21,7 @@ Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能�
 
 ![chrome-screenshot - 4.jpg](https://i.loli.net/2021/05/26/cMplsLd8x3qSPCV.jpg)
 
-4. 选择「加载已解压的扩展程序」
+4. 点击「加载已解压的扩展程序」，选择刚刚下载的文件夹
 
 ![chrome-screenshot - 5.jpg](https://i.loli.net/2021/05/26/mMknT4AdxvLXlS6.jpg)
 

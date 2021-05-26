@@ -2,30 +2,30 @@
 
 [[中文说明](README.zh.md) / English]
 
-Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能：屏蔽任何不必要的网站，帮助你专注在更重要的事上。
+Freedom is a simple Chrome extension that blocks any (distracting) website. So you can focus on what's more important.
 
 ![chrome-screenshot - 2_zh.jpg](https://i.loli.net/2021/05/26/KWvhl58Ha342gVP.jpg)
 
-[从谷歌 Web 商店安装](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
+[Download on Chrome Web Store](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
 
 [![Download](chrome_badge.png)](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
 
-## 手动安装
+## Install Manually
 
-1. 下载[最新 Release](https://github.com/LihaoWang/Website-blocker/releases/tag/1.0.1)
-2. 点击 Chrome 浏览器右上角菜单栏，从「更多工具」中打开「扩展程序」，或在网址栏输入：chrome://extensions/
+1. Download[the latest release](https://github.com/LihaoWang/Website-blocker/releases/tag/1.0.1)
+2. In Chrome menu, select **More tools - Extensions** ，or type in address bar：chrome://extensions/
 
 ![chrome-screenshot - 3.jpg](https://i.loli.net/2021/05/26/XkrWzgGxcs62Y9D.jpg)
 
-3. 在右上角打开「开发者模式」
+3. Enable developer mode
 
 ![chrome-screenshot - 4.jpg](https://i.loli.net/2021/05/26/cMplsLd8x3qSPCV.jpg)
 
-4. 选择「加载已解压的扩展程序」
+4. Click **load unpacked**, select the folder you just downloaded
 
 ![chrome-screenshot - 5.jpg](https://i.loli.net/2021/05/26/mMknT4AdxvLXlS6.jpg)
 
-5. 安装完成，可以看到 Freedom 出现在扩展程序列表中
+5. If installed successfully, you will see Freedom in your extension list
 
 ## 使用
 
@@ -39,9 +39,9 @@ Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能�
 
 请检查「Filter list」中的网址格式，通常情况下，网址应该类似 _ ://.youtube.com/， 即以 _ :// 开头，\* / 结尾，不包含「http」「www」等字符。若遇到网址没有正确处理的情况，可以尝试点击「Reset」之后手动输入类似「youtube.com」这样的简单网址（而不是直接从浏览器地址栏复制粘贴）
 
-- 遇到其他 bug？
+- Encounter any bugs？
 
-请提交 [issue](https://github.com/LihaoWang/Website-blocker/issues)
+Please submit [issue](https://github.com/LihaoWang/Website-blocker/issues)
 
 ## License
 
