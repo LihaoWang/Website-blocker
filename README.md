@@ -1,6 +1,8 @@
 # Freedom Website Blocker
 
-Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能：屏蔽任何不必要的网站，从而让你能专注在更重要的事上。
+Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能：屏蔽任何不必要的网站，帮助你专注在更重要的事上。
+
+![chrome-screenshot - 2_zh.jpg](https://i.loli.net/2021/05/26/KWvhl58Ha342gVP.jpg)
 
 [从谷歌 Web 商店安装](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
 
