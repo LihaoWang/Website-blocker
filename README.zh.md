@@ -1,6 +1,6 @@
 # Freedom Website Blocker
 
-[[中文说明](README.zh.md) / English]
+[中文说明 / [English](README.md)]
 
 Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能：屏蔽任何不必要的网站，帮助你专注在更重要的事上。
 
