@@ -2,9 +2,9 @@
 
 [[中文说明](README.zh.md) / English]
 
-Freedom is a simple Chrome extension that blocks any (distracting) website. So you can focus on what's more important.
+Freedom is a simple Chrome extension that blocks any (distracting) websites. So you can focus on what's important.
 
-![chrome-screenshot - 2_zh.jpg](https://i.loli.net/2021/05/26/KWvhl58Ha342gVP.jpg)
+![chrome-screenshot - 2.jpg](https://i.loli.net/2021/05/27/rRkCvZxQDeELsTd.jpg)
 
 [Download on Chrome Web Store](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
 
@@ -27,11 +27,17 @@ Freedom is a simple Chrome extension that blocks any (distracting) website. So y
 
 5. If installed successfully, you will see Freedom in your extension list
 
+## Usage
+- Type the wesbite address(es) you want to block into the input box, seperate by comma
+- **Add to filter** - add the website(s) to the filter list
+- **Start focus** - enter focus mode
+- **Reset** - clear all the website entries and start from scratch
+
 ## FAQ
 
-- 开启插件后，网站没有被正确屏蔽？
+- The webistes are not blocked as intended?
 
-请检查「Filter list」中的网址格式，通常情况下，网址应该类似 _ ://.youtube.com/， 即以 _ :// 开头，\* / 结尾，不包含「http」「www」等字符。若遇到网址没有正确处理的情况，可以尝试点击「Reset」之后手动输入类似「youtube.com」这样的简单网址（而不是直接从浏览器地址栏复制粘贴）
+Please check the websites shown in the **filter list**. Ideally, the entries will be formated like *\*://\*.youtube.com/\**. If not, click the **reset** button. And try entering simple website format like *youtube.com* instead of copy & paste directly from address bar.
 
 - Encounter any bugs？
 
