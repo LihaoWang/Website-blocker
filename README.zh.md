@@ -4,7 +4,7 @@
 
 Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能：屏蔽任何不必要的网站，帮助你专注在更重要的事上。
 
-![chrome-screenshot - 2_zh.jpg](https://i.loli.net/2021/05/26/KWvhl58Ha342gVP.jpg)
+![chrome-screenshot](./images/chrome-screenshot-2_zh.jpg)
 
 [从谷歌 Web 商店安装](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
 
@@ -15,15 +15,15 @@ Freedom 是一款简洁的 Chrome 浏览器插件，它有且只有一个功能�
 1. 下载[最新 Release](https://github.com/LihaoWang/Website-blocker/releases/tag/1.0.1)
 2. 点击 Chrome 浏览器右上角菜单栏，从「更多工具」中打开「扩展程序」，或在网址栏输入：chrome://extensions/
 
-![chrome-screenshot - 3.jpg](https://i.loli.net/2021/05/26/XkrWzgGxcs62Y9D.jpg)
+![chrome-screenshot](./images/chrome-screenshot-3.jpg)
 
 3. 在右上角打开「开发者模式」
 
-![chrome-screenshot - 4.jpg](https://i.loli.net/2021/05/26/cMplsLd8x3qSPCV.jpg)
+![chrome-screenshot](./images/chrome-screenshot-4.jpg)
 
 4. 点击「加载已解压的扩展程序」，选择刚刚下载的文件夹
 
-![chrome-screenshot - 5.jpg](https://i.loli.net/2021/05/26/mMknT4AdxvLXlS6.jpg)
+![chrome-screenshot](./images/chrome-screenshot-5.jpg)
 
 5. 安装完成，可以看到 Freedom 出现在扩展程序列表中
 
