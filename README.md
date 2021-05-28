@@ -4,7 +4,7 @@
 
 Freedom is a simple Chrome extension that blocks any (distracting) websites. So you can focus on what's important.
 
-![chrome-screenshot - 2.jpg](https://i.loli.net/2021/05/27/rRkCvZxQDeELsTd.jpg)
+![chrome-screenshot](./images/chrome-screenshot-2.jpg)
 
 [Download on Chrome Web Store](https://chrome.google.com/webstore/detail/freedom-website-blocker/addknbmjckakcnlnmpddbaofgjllpamd)
 
@@ -15,15 +15,15 @@ Freedom is a simple Chrome extension that blocks any (distracting) websites. So 
 1. Download [the latest release](https://github.com/LihaoWang/Website-blocker/releases/tag/1.0.1), then unzip
 2. In Chrome menu, select **More tools - Extensions**, or type in address bar: chrome://extensions/
 
-![chrome-screenshot - 3.jpg](https://i.loli.net/2021/05/26/XkrWzgGxcs62Y9D.jpg)
+![chrome-screenshot](./images/chrome-screenshot-3.jpg)
 
 3. Enable developer mode
 
-![chrome-screenshot - 4.jpg](https://i.loli.net/2021/05/26/cMplsLd8x3qSPCV.jpg)
+![chrome-screenshot](./images/chrome-screenshot-4.jpg)
 
 4. Click **load unpacked**, select the folder downloaded
 
-![chrome-screenshot - 5.jpg](https://i.loli.net/2021/05/26/mMknT4AdxvLXlS6.jpg)
+![chrome-screenshot](./images/chrome-screenshot-5.jpg)
 
 5. If installed successfully, you will see Freedom in your extension list
 
